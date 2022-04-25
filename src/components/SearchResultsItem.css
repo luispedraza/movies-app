@@ -1,0 +1,20 @@
+
+
+.search-results-item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 200px;
+    margin: 5px;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+}
+
+.search-results-item:hover {
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.search-results-item img {
+    width: 150px;
+}
