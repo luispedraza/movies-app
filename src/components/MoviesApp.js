@@ -10,13 +10,13 @@ import MovieDetail from './MovieDetail';
 function App() {
 
   const [results, setResults] = useState([]);
-  const [currentMovie, setCurrentMovie] = useState({});
+  const [currentMovie, setCurrentMovie] = useState(null);
   
   return (
     <div className="App">
     <SearchMovies setResults={setResults} />
     <SearchResultsGrid results={results}/>
-    <MovieDetail id="" />
+    <MovieDetail id={currentMovie} />
     </div>
     );
   }

@@ -1,25 +1,27 @@
+import axios from "axios";
 
 export default class IMD_API {
-
-    constructor() {
-        this.API = "k_6t7g2is6";
-
-    }
-
     search = async (expression) => {
-        const lang = "en";
-        expression = encodeURI(expression);
-        const url = `https://imdb-api.com/${lang}/API/Search/${this.API}/${expression}`;
-        console.log(url);
-        const response = await fetch(url);
-        console.log("response ", response);
-        const {results} = await response.json();
-        console.log(results);
-        return results;
+        const options = {
+            method: "GET",
+            url: "http://localhost:8080/search",
+            headers: {
+                query: expression,
+            }
+        }
+        const response = await axios.request(options);        
+        return response.data.results;
     }
 
-    movieDetails = async (id) => {
-        
+    movieDetails = async (movieID) => {
+        const options = {
+            method: "GET",
+            url: "http://localhost:8080/details",
+            headers: {
+                id: movieID,
+            }
+        }
+        const response = await axios.request(options);
+        return response.data;
     }
-
 }
