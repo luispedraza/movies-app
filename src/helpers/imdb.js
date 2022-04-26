@@ -18,4 +18,8 @@ export default class IMD_API {
         return results;
     }
 
+    movieDetails = async (id) => {
+        
+    }
+
 }

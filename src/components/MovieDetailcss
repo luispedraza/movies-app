@@ -1,0 +1,4 @@
+.movie-detail {
+    float: right;
+    width: 20%;
+}

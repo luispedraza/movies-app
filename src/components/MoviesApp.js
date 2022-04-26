@@ -3,6 +3,7 @@ import { SearchMovies } from './SearchMovies';
 import { SearchResultsGrid } from './SearchResultsGrid';
 import './MoviesApp.css';
 import { useState } from 'react';
+import MovieDetail from './MovieDetail';
 
 
 
@@ -15,6 +16,7 @@ function App() {
     <div className="App">
     <SearchMovies setResults={setResults} />
     <SearchResultsGrid results={results}/>
+    <MovieDetail id="" />
     </div>
     );
   }
