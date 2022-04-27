@@ -20,6 +20,7 @@ SERVER.get("/search", (req, res) => {
         method: "GET",
         url: `https://imdb-api.com/${lang}/API/Search/${API_KEY}/${query}`,
     }
+    console.log(options);
 
     axios.request(options)
         .then((response) => {

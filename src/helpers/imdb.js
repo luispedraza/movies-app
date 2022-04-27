@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default class IMD_API {
-    search = async (expression) => {
+    static async search (expression) {
         const options = {
             method: "GET",
             url: "http://localhost:8080/search",
@@ -13,7 +13,7 @@ export default class IMD_API {
         return response.data.results;
     }
 
-    movieDetails = async (movieID) => {
+    static async movieDetails (movieID) {
         const options = {
             method: "GET",
             url: "http://localhost:8080/details",

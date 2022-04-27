@@ -1,18 +1,12 @@
 import React, { useState } from 'react'
-import IMD_API from '../helpers/imdb';
 
-export const SearchMovies = ({setResults}) => {
+export const SearchMovies = ({setQuery}) => {
 
     const [expression, setExpression]= useState("");
-
-    const API = new IMD_API();
     
     const handleOnSubmit = (e) => {
         e.preventDefault();
-        API.search(expression)
-            .then(results => {
-                setResults(results)
-            })
+        setQuery(expression);
         setExpression("");
     }
 
